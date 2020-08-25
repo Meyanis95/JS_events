@@ -28,7 +28,11 @@ let all_cards = document.getElementsByClassName("card mb-4 box-shadow")
 Array.prototype.forEach.call(all_cards, card => {
   let view_buttons = card.getElementsByClassName("btn btn-sm btn-success")[0]
   let card_text = card.getElementsByClassName("card-text")[0]
-  view_buttons.addEventListener("mouseover", function() {if (card_text.style.display === "none") { card_text.style.display = "" } else {card_text.style.display = "none"}; if (card.style.width === "20%") { card.style.width = "100%" } else {card.style.width = "20%"};})
+  view_buttons.addEventListener("mouseover", function() {
+    if (card_text.style.display === "none") { card_text.style.display = "" } 
+    else {card_text.style.display = "none"}; 
+    if (card.querySelector(".card-img-top").style.width === "20%") { card.querySelector(".card-img-top").style.width = "100%" } 
+    else {card.querySelector(".card-img-top").style.width = "20%"};})
 });
 
 //Question 7 
