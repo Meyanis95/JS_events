@@ -33,7 +33,9 @@ Array.prototype.forEach.call(all_cards, card => {
 
 //Question 7 
 let right_btn = document.getElementsByClassName("btn btn-secondary my-2")[0]
-all = document.getElementsByClassName("col-md-4")
-console.log(all)
-console.log(all.parentNode)
-right_btn.addEventListener("click", function() {all.insertBefore(all[5],all[0])})
+all = document.getElementsByClassName("row")[1]
+right_btn.addEventListener("click", function() {all.insertBefore(all.lastElementChild,all.firstElementChild)})
+
+//Question 8
+let left_btn = document.getElementsByClassName("btn btn-primary my-2")[0]
+left_btn.addEventListener("click", function(e) {e.preventDefault(); all.appendChild(all.firstElementChild)})
